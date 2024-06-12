@@ -28,26 +28,42 @@ Com base no vídeo de lançamento do iPhone de 2007 (link abaixo), você deve el
  *
  * @param args os argumentos de linha de comando
  */
+
 public class Iphone implements ReprodutorMusical, AparelhoTelefonico, NavegadorInternet {
     public static void main(String[] args) {
         Iphone iphone = new Iphone();
+        // Song song = new Song("Step UP 2 soundtrack", "Timbaland - Bounce", "2008");
 
         // Chamar os métodos da classe iPhone
-        iphone.tocar();
+        iphone.tocar(100);
         iphone.pausar();
-        iphone.selecionarMusica("Canção do amor");
+        iphone.selecionarMusica("Step UP 2 soundtrack", "Timbaland - Bounce", "2008");
         iphone.ligar("12345678");
         iphone.atender();
         iphone.iniciarCorreioVoz();
         iphone.exibirPagina("https://www.google.com");
         iphone.adicionarNovaAba();
         iphone.atualizarPagina();
+        // iphone.play(song);
+
     }
 
+    // public void play(Song play) {
+    //     // Lógica para reproduzir música
+    //     System.out.println("Reproduzindo música...");
+    //     System.out.println("Título: " + play.getTitle());
+    //     System.out.println("Artista: " + play.getArtist());
+    //     System.out.println("Ano: " + play.getYear());
+
+    // }
+
     @Override
-    public void tocar() {
+    public void tocar(int volume) {
         // Lógica para reproduzir música
         System.out.println("Reproduzindo música.....");
+        System.out.println("volume: " + volume);
+        
+
     }
 
     @Override
@@ -56,9 +72,11 @@ public class Iphone implements ReprodutorMusical, AparelhoTelefonico, NavegadorI
     }
 
     @Override
-    public void selecionarMusica(String musica) {
+    public void selecionarMusica(String musica, String artista, String ano) {
         // Lógica para selecionar uma música
         System.out.println("Selecionando: " + musica);
+        System.out.println("Artista: " + artista);
+        System.out.println("Ano: " + ano);
     }
 
     @Override

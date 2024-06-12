@@ -4,29 +4,33 @@
 ### Diagrama UML (Mermaid)
 ```mermaid
 classDiagram
-    class interface ReprodutorMusical {
+
+    class iPhone {
+    
+
+    iPhone --> ReprodutorMusical {
+        class interface ReprodutorMusical {
         +tocar() : void
         +pausar() : void
-        +selecionarMusica(String musica) : void
-
+        +selecionarMusica(String musica, String artista, String ano) : void
+        }
     }
-
-    class interface AparelhoTelefonico {
+     
+    iPhone --> AparelhoTelefonico {
+        class interface AparelhoTelefonico {
         +ligar(String numero) : void
         +atender() : void
         +iniciarCorreioVoz() : void
+        }
     }
 
-    class interface NavegadorInternet {
+    iPhone --> NavegadorInternet {
+        class interface NavegadorInternet {
         +exibirPagina(String url) : void
         +adicionarNovaAba : void
         +atualizarPagina : void
+        }
     }
-
-    class iPhone {
-    }
-
-    iPhone --> ReprodutorMusical
-    iPhone --> AparelhoTelefonico
-    iPhone --> NavegadorInternet
+}
+ 
 ```
