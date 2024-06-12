@@ -47,6 +47,7 @@ public class Iphone implements ReprodutorMusical, AparelhoTelefonico, NavegadorI
     @Override
     public void tocar() {
         // Lógica para reproduzir música
+        System.out.println("Reproduzindo música...");
     }
 
     @Override
