@@ -6,31 +6,25 @@
 classDiagram
 
     class iPhone {
-    
-
-    iPhone --> ReprodutorMusical {
+    iPhone --> interface ReprodutorMusical
+    iPhone --> interface AparelhoTelefonico 
+    iPhone --> interface NavegadorInternet 
+ }
         class interface ReprodutorMusical {
         +tocar() : void
         +pausar() : void
         +selecionarMusica(String musica, String artista, String ano) : void
         }
-    }
-     
-    iPhone --> AparelhoTelefonico {
         class interface AparelhoTelefonico {
         +ligar(String numero) : void
         +atender() : void
         +iniciarCorreioVoz() : void
         }
-    }
-
-    iPhone --> NavegadorInternet {
         class interface NavegadorInternet {
         +exibirPagina(String url) : void
         +adicionarNovaAba : void
         +atualizarPagina : void
         }
-    }
-}
+
  
 ```
