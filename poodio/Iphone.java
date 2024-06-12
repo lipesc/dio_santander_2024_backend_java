@@ -23,6 +23,11 @@ Com base no vídeo de lançamento do iPhone de 2007 (link abaixo), você deve el
 1. Criar um diagrama UML que represente as funcionalidades descritas acima.
 2. Implementar as classes e interfaces correspondentes em Java. */
 
+/**
+ * Método principal para executar várias ações em um objeto iPhone.
+ *
+ * @param args os argumentos de linha de comando
+ */
 public class Iphone implements ReprodutorMusical, AparelhoTelefonico, NavegadorInternet {
     public static void main(String[] args) {
         Iphone iphone = new Iphone();
